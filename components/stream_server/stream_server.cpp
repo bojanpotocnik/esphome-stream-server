@@ -28,7 +28,7 @@ void StreamServerComponent::setup() {
     this->socket_ = socket::socket_ip(SOCK_STREAM, PF_INET);
     this->socket_->setblocking(false);
     this->socket_->bind(reinterpret_cast<struct sockaddr *>(&bind_addr), bind_addrlen);
-    this->socket_->listen(8);
+    this->socket_->listen(1);
 
     this->publish_sensor();
 }
